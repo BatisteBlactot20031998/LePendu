@@ -6,7 +6,7 @@ alert("Nous allons dès maintenant te proposer un défi contre notre champion du
 
 let lifepoint = 7; 
 let restOfMyWord = 0;
-const MySecretWord = [
+const mySecretWord = [
     "heineken",
     "grimbergen",
     "1664",
@@ -20,8 +20,8 @@ const MySecretWord = [
 ];
 
 function choiceRandomWord(){
-    let randomWordInMyConst = Math.floor(Math.random() * Math.floor(MySecretWord.length));
-    return MySecretWord[randomWordInMyConst];
+    let randomWordInMyConst = Math.floor(Math.random() * Math.floor(mySecretWord.length));
+    return mySecretWord[randomWordInMyConst];
 };
 
 function splitRandomWordInArray(randomWordInMyConst) {
@@ -43,3 +43,8 @@ function noCheatOneLetter (oneLetter){
     }
     return oneLetter
 };
+
+let randomWordInMyConst = choiceRandomWord(mySecretWord);
+let arrayWord = splitRandomWordInArray(randomWordInMyConst);
+let hiddenLetter = showHiddenLetter(randomWordInMyConst);
+
